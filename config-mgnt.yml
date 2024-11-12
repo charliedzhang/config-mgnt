@@ -1,0 +1,5 @@
+---
+- name: Check config files
+  hosts: all
+  roles:
+    - config-mgnt
