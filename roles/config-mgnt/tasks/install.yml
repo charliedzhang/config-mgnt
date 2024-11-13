@@ -1,3 +1,3 @@
 - name: install
-  template: src=hosts.j2 dest=/etc/hosts
-
+  template: src="{{ config_file | basename }}.j2" dest="{{ config_file }}"
+  when: config_file == "/etc/hosts"

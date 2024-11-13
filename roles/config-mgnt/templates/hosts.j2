@@ -1,3 +1,4 @@
+# {{ ansible_managed }}
 127.0.0.1 localhost
 
 # The following lines are desirable for IPv6 capable hosts
@@ -7,9 +8,8 @@ ff00::0 ip6-mcastprefix
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ff02::3 ip6-allhosts
-192.168.50.82	semaphore-poc-2
-192.168.50.52	semaphore-poc-3
-
-
+{% for item in play_hosts %}
+{{ hostvars[item]['ansible_host'] }}  {{ item }} {{ item.split('.')[0] }}
+{% endfor %}
 
 #####
