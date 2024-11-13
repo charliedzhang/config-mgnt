@@ -1,1 +1,4 @@
 config_file: "/etc/hosts"
+search_server: [fortinet-us.com]
+name_server: [127.0.0.53]
+

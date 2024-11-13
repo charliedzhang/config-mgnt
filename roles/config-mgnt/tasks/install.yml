@@ -1,3 +1,4 @@
-- name: install
+- name: config  {{ config_file }}
   template: src="{{ config_file | basename }}.j2" dest="{{ config_file }}"
-  when: config_file == "/etc/hosts"
+  
+   

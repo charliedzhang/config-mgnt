@@ -1,0 +1,9 @@
+{% for nameserver in name_server %}
+nameserver {{ nameserver }}
+{% endfor %}
+options edns0 trust-ad
+{% for search in search_server %}
+search {{ search }}
+{% endfor %}
+
+
